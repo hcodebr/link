@@ -65,7 +65,8 @@ export default class LinkTool {
      * Tool's initial config
      */
     this.config = {
-      endpoint: config.endpoint || ''
+      endpoint: config.endpoint || '',
+      headers: config.headers || {}
     };
 
     this.nodes = {
@@ -349,6 +350,7 @@ export default class LinkTool {
     try {
       const response = await (ajax.get({
         url: this.config.endpoint,
+        headers: this.config.headers,
         data: {
           url
         }
@@ -408,7 +410,7 @@ export default class LinkTool {
    * @return {HTMLElement}
    */
   make(tagName, classNames = null, attributes = {}) {
-    let el = document.createElement(tagName);
+    const el = document.createElement(tagName);
 
     if (Array.isArray(classNames)) {
       el.classList.add(...classNames);
@@ -416,7 +418,7 @@ export default class LinkTool {
       el.classList.add(classNames);
     }
 
-    for (let attrName in attributes) {
+    for (const attrName in attributes) {
       el[attrName] = attributes[attrName];
     }
 
