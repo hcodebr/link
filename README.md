@@ -41,7 +41,7 @@ Get the package
 
 ```shell
 
-npm i --save-dev @editorjs/link
+npm i --save-dev hcode-editorjs-link
 
 ```
 
@@ -53,7 +53,7 @@ Include module at your application
 
 ```javascript
 
-const  LinkTool = require('@editorjs/link');
+const  LinkTool = require('hcode-editorjs-link');
 
 ```
 
@@ -73,11 +73,11 @@ const  LinkTool = require('@editorjs/link');
 
   
 
-You can load specific version of package from [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@editorjs/link).
+You can load specific version of package from [jsDelivr CDN](https://www.jsdelivr.com/package/npm/hcode-editorjs-link).
 
   
 
-`https://cdn.jsdelivr.net/npm/@editorjs/link@2.0.0`
+`https://cdn.jsdelivr.net/npm/hcode-editorjs-link@2.0.0`
 
   
 
